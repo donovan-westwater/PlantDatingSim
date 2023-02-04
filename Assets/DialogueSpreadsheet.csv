@@ -1,0 +1,10 @@
+Event_id,Personality_id,Sentence_#,Text
+0,0,0,Prompt A
+1,0,0,Prompt B
+2,0,0,Prompt C
+0,0,1,Choice 1A
+1,0,1,Choice 1B
+2,0,1,Choice 1C
+0,0,2,Choice 2A
+1,0,2,Choice 2B
+2,0,2,Choice 2C
