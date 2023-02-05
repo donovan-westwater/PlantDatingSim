@@ -31,7 +31,7 @@ public class DialogueManager : MonoBehaviour
     public delegate void OnDialogueUpdateEvent();
     public event OnDialogueUpdateEvent onDialougeUpdateEvent;
     public bool wait = false;
-    int turn = 0;
+    int turn = 1;
     private void Awake()
     {
         if(instance == null)

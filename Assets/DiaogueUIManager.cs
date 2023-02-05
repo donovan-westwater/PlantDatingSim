@@ -8,19 +8,22 @@ public class DiaogueUIManager : MonoBehaviour
     // Start is called before the first frame update
     public GameObject diaPrefab;
     public GameObject promptWindow;
-    public Image[] bars = new Image[3];
+    public Slider[] bars = new Slider[3];
     Vector3 choiceA;
     Vector3 choiceB;
     bool personalityChoice = false;
     void Start()
     {
+        bars[0].maxValue = PlayerManager.instance.SolarMeter;
+        bars[1].maxValue = PlayerManager.instance.SoilMeter;
+        bars[2].maxValue = PlayerManager.instance.WaterMeter;
         DialogueManager.instance.onDialougeUpdateEvent += OnDialougeUpdate;
     }
     void UpdateBar()
     {
-        bars[0].fillAmount = Mathf.Clamp(PlayerManager.instance.SolarMeter / 100, 0, 1);
-        bars[0].fillAmount = Mathf.Clamp(PlayerManager.instance.SoilMeter / 100, 0, 1);
-        bars[0].fillAmount = Mathf.Clamp(PlayerManager.instance.WaterMeter / 100, 0, 1);
+        bars[0].value = Mathf.Clamp(PlayerManager.instance.SolarMeter, 0, 100);
+        bars[1].value = Mathf.Clamp(PlayerManager.instance.SoilMeter, 0, 100);
+        bars[2].value = Mathf.Clamp(PlayerManager.instance.WaterMeter, 0, 100);
     }
     public void OnDialougeUpdate()
     {
@@ -113,6 +116,10 @@ public class DiaogueUIManager : MonoBehaviour
                 PlayerManager.instance.SoilMeter += choiceB.y;
                 PlayerManager.instance.WaterMeter += choiceB.z;
             }
+            PlayerManager.instance.SolarMeter = Mathf.Clamp(PlayerManager.instance.SolarMeter, 0f, 100f);
+            PlayerManager.instance.SoilMeter = Mathf.Clamp(PlayerManager.instance.SoilMeter, 0f, 100f);
+            PlayerManager.instance.WaterMeter = Mathf.Clamp(PlayerManager.instance.WaterMeter, 0f, 100f);
+            UpdateBar();
         }
         DialogueManager.instance.activeChoices.RemoveAt(0);
         DialogueManager.instance.wait = false;

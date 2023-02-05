@@ -30,7 +30,7 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(SolarMeter < 0 || WaterMeter < 0 || SoilMeter < 0)
+        if(SolarMeter <= 0 || WaterMeter <= 0 || SoilMeter <= 0)
         {
             FailScreen.SetActive(true);
         }
