@@ -46,7 +46,7 @@ public class DiaogueUIManager : MonoBehaviour
         choiceA = d.choiceA;
         choiceB = d.choiceB;
         personalityChoice = d.isPersonalityChoice;
-        if (personalityChoice) promptWindow.transform.GetChild(0).GetComponent<Text>().text = "Your plant friend wants to expand their interests. What will you give them?";
+        if (personalityChoice) promptWindow.transform.GetChild(0).GetComponent<Text>().text = "Your plant friend wants to expand their interests. What will you do?";
         
         int i = 1;
         if (d.isPersonalityChoice) {  

@@ -1,91 +1,91 @@
 Event_id,Personality_id,Sentence_#,Text,SolarEffect,SoilEffect,WaterEffect,Is this a personality choice?
-0,0,0,Prompt 0A,0,0,0,FALSE
-0,0,1,Choice 1A,0,20,-10,FALSE
-0,0,2,Choice 2A,20,-10,0,FALSE
-0,1,0,Prompt 0B,0,0,0,FALSE
-0,1,1,Choice 1B,0,20,-10,FALSE
-0,1,2,Choice 2B,20,-10,0,FALSE
-0,2,0,Prompt 0C,0,0,0,FALSE
-0,2,1,Choice 1C,0,20,-10,FALSE
-0,2,2,Choice 2C,20,-10,0,FALSE
-0,3,0,Prompt 0D,0,0,0,FALSE
-0,3,1,Choice 1D,0,20,-10,FALSE
-0,3,2,Choice 2D,20,-10,0,FALSE
-0,4,0,Prompt 0E,0,0,0,FALSE
-0,4,1,Choice 1E,20,0,-10,FALSE
-0,4,2,Choice 2E,-10,0,20,FALSE
-1,0,0,Prompt 1A,0,0,0,FALSE
-1,0,1,Choice 1A,20,0,-10,FALSE
-1,0,2,Choice 2A,-10,0,20,FALSE
-1,1,0,Prompt 1B,0,0,0,FALSE
-1,1,1,Choice 1B,20,0,-10,FALSE
-1,1,2,Choice 2B,-10,0,20,FALSE
-1,2,0,Prompt 1C,0,0,0,FALSE
-1,2,1,Choice 1C,20,0,-10,FALSE
-1,2,2,Choice 2C,-10,0,20,FALSE
-1,3,0,Prompt 1D,0,0,0,FALSE
-1,3,1,Choice 1D,20,0,-10,FALSE
-1,3,2,Choice 2D,-10,0,20,FALSE
-1,4,0,Prompt 1E,0,0,0,FALSE
-1,4,1,Choice 1E,20,0,-10,FALSE
-1,4,2,Choice 2E,-10,0,20,FALSE
-2,0,0,Prompt 2A,0,0,0,FALSE
-2,0,1,Choice 1A,0,20,-10,FALSE
-2,0,2,Choice 2A,-10,0,20,FALSE
-2,1,0,Prompt 2B,0,0,0,FALSE
-2,1,1,Choice 1B,0,20,-10,FALSE
-2,1,2,Choice 2B,-10,0,20,FALSE
-2,2,0,Prompt 2C,0,0,0,FALSE
-2,2,1,Choice 1C,0,20,-10,FALSE
-2,2,2,Choice 2C,-10,0,20,FALSE
-2,3,0,Prompt 2D,0,0,0,FALSE
-2,3,1,Choice 1D,0,20,-10,FALSE
-2,3,2,Choice 2D,-10,0,20,FALSE
-2,4,0,Prompt 2E,0,0,0,FALSE
-2,4,1,Choice 1E,0,20,-10,FALSE
-2,4,2,Choice 2E,-10,0,20,FALSE
-3,0,0,Prompt 3A,0,0,0,FALSE
-3,0,1,Choice 1A,-10,0,20,FALSE
-3,0,2,Choice 2A,0,20,-10,FALSE
-3,1,0,Prompt3B,0,0,0,FALSE
-3,1,1,Choice 1B,-10,0,20,FALSE
-3,1,2,Choice 2B,0,20,-10,FALSE
-3,2,0,Prompt3C,0,0,0,FALSE
-3,2,1,Choice 1C,-10,0,20,FALSE
-3,2,2,Choice 2C,0,20,-10,FALSE
-3,3,0,Prompt3D,0,0,0,FALSE
-3,3,1,Choice 1D,-10,0,20,FALSE
-3,3,2,Choice 2D,0,20,-10,FALSE
-3,4,0,Prompt3E,0,0,0,FALSE
-3,4,1,Choice 1E,-10,0,20,FALSE
-3,4,2,Choice 2E,0,20,-10,FALSE
-4,0,0,Prompt 4A,0,0,0,FALSE
-4,0,1,Choice 1A,-10,0,20,FALSE
-4,0,2,Choice 2A,0,20,-10,FALSE
-4,1,0,Prompt 4B,0,0,0,FALSE
-4,1,1,Choice 1B,-10,0,20,FALSE
-4,1,2,Choice 2B,0,20,-10,FALSE
-4,2,0,Prompt 4C,0,0,0,FALSE
-4,2,1,Choice 1C,-10,0,20,FALSE
-4,2,2,Choice 2C,0,20,-10,FALSE
-4,3,0,Prompt 4D,0,0,0,FALSE
-4,3,1,Choice 1D,-10,0,20,FALSE
-4,3,2,Choice 2D,0,20,-10,FALSE
-4,4,0,Prompt 4E,0,0,0,FALSE
-4,4,1,Choice 1E,-10,0,20,FALSE
-4,4,2,Choice 2E,0,20,-10,FALSE
-5,0,0,P1 Choice A,0,0,0,TRUE
-5,1,0,P1 Choice b,0,0,0,TRUE
-5,2,0,P1 Choice C,0,0,0,TRUE
-5,3,0,P1 Choice D,0,0,0,TRUE
-5,4,0,P1 Choice E,0,0,0,TRUE
-6,0,0,P3 Choice A,0,0,0,TRUE
-6,1,0,P3 Choice b,0,0,0,TRUE
-6,2,0,P3 Choice C,0,0,0,TRUE
-6,3,0,P3 Choice D,0,0,0,TRUE
-6,4,0,P3 Choice E,0,0,0,TRUE
-7,0,0,P4 Choice A,0,0,0,TRUE
-7,1,0,P4 Choice b,0,0,0,TRUE
-7,2,0,P4 Choice C,0,0,0,TRUE
-7,3,0,P4 Choice D,0,0,0,TRUE
-7,4,0,P4 Choice E,0,0,0,TRUE
+0,0,0,There is some new soil that might be healther for your plant. But it doesn't retain as much water. What will you do?,0,0,0,FALSE
+0,0,1,Give your plant the new soil!,0,20,-10,FALSE
+0,0,2,Nah. The plant needs water!,0,-10,20,FALSE
+0,1,0,Your date wants to try out some new soil. However it doesn't retain as much water. What will you do?,0,0,0,FALSE
+0,1,1,Give your plant the new soil! It will look cute!,0,20,-10,FALSE
+0,1,2,Hydriation is better for the skin. More water! ,0,-10,20,FALSE
+0,2,0,Your date has found some research saying this new soil leads to better health. It holds less water though…,0,0,0,FALSE
+0,2,1,Your Plant Date knows whats up. New soil time!,0,20,-10,FALSE
+0,2,2,The plant hasn't been hydriating enough. More water!,0,-10,20,FALSE
+0,3,0,Your date decided to get some new soil without your premission. They might get dehydrated but the plant doesn't care…,0,0,0,FALSE
+0,3,1,The plant keep the soil. Support your date's independence!,0,20,-10,FALSE
+0,3,2,They don't need the soil. Water is more important.,0,-10,20,FALSE
+0,4,0,The plant really thinks this new soil will boost stem growth! It holds less water though…,0,0,0,FALSE
+0,4,1,More Growth! Grow taller!,0,20,-10,FALSE
+0,4,2,Staying hydrated is more important!,0,-10,20,FALSE
+1,0,0,You think the plant needs more time out in the sun. It will dry the plant out though….,0,0,0,FALSE
+1,0,1,The plant needs more sun.,20,0,-10,FALSE
+1,0,2,The plant needs more water,-10,0,20,FALSE
+1,1,0,The plant wants to play in the sun! It will dry out a bit though...,0,0,0,FALSE
+1,1,1,More playtime in the sun!,20,0,-10,FALSE
+1,1,2,We can have fun indoors!,-10,0,20,FALSE
+1,2,0,Your date wants to do some reading indoors. However the plant will get less sunlight.,0,0,0,FALSE
+1,2,1,The plant can read outdoors!,20,0,-10,FALSE
+1,2,2,Let it have some reading time.,-10,0,20,FALSE
+1,3,0,This plant wants to chill out with you. But the plant looks cooler outside!,0,0,0,FALSE
+1,3,1,Go outside and chill out with the plant!,20,0,-10,FALSE
+1,3,2,Stay in and watch a movie.,-10,0,20,FALSE
+1,4,0,Your plant wants to workout outside. They will have trouble hydrating though…,0,0,0,FALSE
+1,4,1,Time to work up a sweat!,20,0,-10,FALSE
+1,4,2,Pump some iron indoors!,-10,0,20,FALSE
+2,0,0,You want to do more activities with the plant. What will you do?,0,0,0,FALSE
+2,0,1,Lay around in the grass,0,20,-10,FALSE
+2,0,2,Go to an indoor pool.,-10,0,20,FALSE
+2,1,0,Your plant wants to go shopping today! Where do you go?,0,0,0,FALSE
+2,1,1,Go the hardware and try out soils!,0,20,-10,FALSE
+2,1,2,Go to an outdoor juice bar and get some new drinks!,-10,0,20,FALSE
+2,2,0,You want to take your plant somewhere interesting. Where do you go?,0,0,0,FALSE
+2,2,1,Go to a local park with a long and fascinating history!,0,20,-10,FALSE
+2,2,2,Go to the beach and talk about pirate history!,-10,0,20,FALSE
+2,3,0,Your plant date wants to hang out with you. Where do you go?,0,0,0,FALSE
+2,3,1,Go to an abandoned greenhouse and join a rave!,0,20,-10,FALSE
+2,3,2,Sit under the shade of a tree and relax.,-10,0,20,FALSE
+2,4,0,Your want to workout with your plant. Where do you go?,0,0,0,FALSE
+2,4,1,Take a long jog around the park!,0,20,-10,FALSE
+2,4,2,Do somes laps in the indoor pool!,-10,0,20,FALSE
+3,0,0,You think your plant should get some fresh soil. But it will need to stay indoors while you change the soil.,0,0,0,FALSE
+3,0,1,Keep the soil and go outside.,20,-10,0,FALSE
+3,0,2,Change the soil already.,-10,20,0,FALSE
+3,1,0,The plant wants to play by the tree near your home. You do need to change the soil in the pot though…,0,0,0,FALSE
+3,1,1,The plant play outside. It is cuter that way!,20,-10,0,FALSE
+3,1,2,Give the plant some affection while you change the soil.,-10,20,0,FALSE
+3,2,0,Your plant is working on a beautiful poem. How will you give the plant inspiration?,0,0,0,FALSE
+3,2,1,Take them outside!,20,-10,0,FALSE
+3,2,2,Sing them a song indoors!,-10,20,0,FALSE
+3,3,0,Your plant wants you go out on the town with them and party! But you need to change the soil...,0,0,0,FALSE
+3,3,1,Go out and party!,20,-10,0,FALSE
+3,3,2,Change the soil and give them some space.,-10,20,0,FALSE
+3,4,0,Your plant wants you to try a some workout routines. Which will you pick first?,0,0,0,FALSE
+3,4,1,Do a cardo workout in the hot sun!,20,-10,0,FALSE
+3,4,2,Go on a run in a shaded forest.,-10,20,0,FALSE
+4,0,0,It is raining outside and you want you plant to soak up the rain. It will miss some artifical sun.,0,0,0,FALSE
+4,0,1,Put it out in the rain.,-10,0,20,FALSE
+4,0,2,Stay indoors.,0,20,-10,FALSE
+4,1,0,It is a rainy day and your plant is bored. What will you do?,0,0,0,FALSE
+4,1,1,Splash around in the rain!,-10,0,20,FALSE
+4,1,2,Try out some clothes ( and soils!),0,20,-10,FALSE
+4,2,0,Your date wants to watch a documentry on a rainy day. Do you join them?,0,0,0,FALSE
+4,2,1,Turn the plant down but bring them some water to drink while the enjoy the movie.,-10,0,20,FALSE
+4,2,2,Join them and bring saltyand buttery popcorn!,0,20,-10,FALSE
+4,3,0,On a rainy day your plant got into a fight and was hurt! What will you do?,0,0,0,FALSE
+4,3,1,Bring the plant some water and make sure they rest a few days.,-10,0,20,FALSE
+4,3,2,Bring the plant some fresh soil and make sure they don't get into anymore trouble.,0,20,-10,FALSE
+4,4,0,It is raining and your plant friend wants to try running in the rain. What do you do?,0,0,0,FALSE
+4,4,1,Running in the rain is refreshing. Lets do it!,-10,0,20,FALSE
+4,4,2,No. lets stay indoors and make some healthy smoothies.,0,20,-10,FALSE
+5,0,0,Give the plant nothing,0,0,0,TRUE
+5,1,0,Give them some candy!,0,0,0,TRUE
+5,2,0,Give them a book for light reading.,0,0,0,TRUE
+5,3,0,Give them a nice pair of shades!,0,0,0,TRUE
+5,4,0,Give them a soccer ball to play with!,0,0,0,TRUE
+6,0,0,Take the plant nothing. Why bother?,0,0,0,TRUE
+6,1,0,Take the plant to a clothing store!,0,0,0,TRUE
+6,2,0,Take the plant to the library!,0,0,0,TRUE
+6,3,0,Take the plant to the skatepark!,0,0,0,TRUE
+6,4,0,Take the plant to the park and play ball!,0,0,0,TRUE
+7,0,0,Give the plant nothing. They are fine as they are!,0,0,0,TRUE
+7,1,0,Give the plant a teddy bear!,0,0,0,TRUE
+7,2,0,Give the plant a chemistry set!,0,0,0,TRUE
+7,3,0,Give the plant a guitar!,0,0,0,TRUE
+7,4,0,Give the plant some running shoes!,0,0,0,TRUE

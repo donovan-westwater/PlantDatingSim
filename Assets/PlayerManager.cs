@@ -12,6 +12,10 @@ public class PlayerManager : MonoBehaviour
     public GameObject WinScreen;
     public static PlayerManager instance;
     public float[] personalityRankings = { 0, 0, 0, 0, 0 }; //{boring,cute,intelligent,cool,sporty}
+    public Sprite[] growthSprites;
+    public Sprite[] spritesMasc;
+    public Sprite[] spritesFemme;
+    public Image plantSprite;
     public int growthState = 0;
     public bool isFemme = false;
     Text deathText;
@@ -51,7 +55,7 @@ public class PlayerManager : MonoBehaviour
                 FailScreen.SetActive(false);
             }               
         }
-        if(growthState > 2)
+        if(growthState > 3)
         {
             int maxIndex = 0;
             float max = -999;
@@ -62,6 +66,7 @@ public class PlayerManager : MonoBehaviour
             //Switch Sprite
             if (isFemme)
             {
+                plantSprite.sprite = spritesFemme[maxIndex];
                 switch (maxIndex)
                 {
                     case 0:
@@ -86,6 +91,7 @@ public class PlayerManager : MonoBehaviour
                         break;
                 }
             }else{
+                plantSprite.sprite = spritesMasc[maxIndex];
                 switch (maxIndex)
                 {
                     case 0:
@@ -118,6 +124,8 @@ public class PlayerManager : MonoBehaviour
                 SolarMeter = 100;
                 SoilMeter = 100;
                 WaterMeter = 100;
+                growthState = 0;
+                
                 for (int i = 0; i < personalityRankings.Length; i++)
                 {
                     personalityRankings[i] = 0;
@@ -126,6 +134,10 @@ public class PlayerManager : MonoBehaviour
                 DialogueManager.instance.wait = false;
                 FailScreen.SetActive(false);
             }
+        }
+        else if( growthState > 0)
+        {
+            plantSprite.sprite = growthSprites[growthState-1];
         }
     }
 }
