@@ -1,10 +1,91 @@
-Event_id,Personality_id,Sentence_#,Text
-0,0,0,Prompt A
-1,0,0,Prompt B
-2,0,0,Prompt C
-0,0,1,Choice 1A
-1,0,1,Choice 1B
-2,0,1,Choice 1C
-0,0,2,Choice 2A
-1,0,2,Choice 2B
-2,0,2,Choice 2C
+Event_id,Personality_id,Sentence_#,Text,SolarEffect,SoilEffect,WaterEffect,Is this a personality choice?
+0,0,0,Prompt 0A,0,0,0,FALSE
+0,0,1,Choice 1A,0,20,-10,FALSE
+0,0,2,Choice 2A,20,-10,0,FALSE
+0,1,0,Prompt 0B,0,0,0,FALSE
+0,1,1,Choice 1B,0,20,-10,FALSE
+0,1,2,Choice 2B,20,-10,0,FALSE
+0,2,0,Prompt 0C,0,0,0,FALSE
+0,2,1,Choice 1C,0,20,-10,FALSE
+0,2,2,Choice 2C,20,-10,0,FALSE
+0,3,0,Prompt 0D,0,0,0,FALSE
+0,3,1,Choice 1D,0,20,-10,FALSE
+0,3,2,Choice 2D,20,-10,0,FALSE
+0,4,0,Prompt 0E,0,0,0,FALSE
+0,4,1,Choice 1E,20,0,-10,FALSE
+0,4,2,Choice 2E,-10,0,20,FALSE
+1,0,0,Prompt 1A,0,0,0,FALSE
+1,0,1,Choice 1A,20,0,-10,FALSE
+1,0,2,Choice 2A,-10,0,20,FALSE
+1,1,0,Prompt 1B,0,0,0,FALSE
+1,1,1,Choice 1B,20,0,-10,FALSE
+1,1,2,Choice 2B,-10,0,20,FALSE
+1,2,0,Prompt 1C,0,0,0,FALSE
+1,2,1,Choice 1C,20,0,-10,FALSE
+1,2,2,Choice 2C,-10,0,20,FALSE
+1,3,0,Prompt 1D,0,0,0,FALSE
+1,3,1,Choice 1D,20,0,-10,FALSE
+1,3,2,Choice 2D,-10,0,20,FALSE
+1,4,0,Prompt 1E,0,0,0,FALSE
+1,4,1,Choice 1E,20,0,-10,FALSE
+1,4,2,Choice 2E,-10,0,20,FALSE
+2,0,0,Prompt 2A,0,0,0,FALSE
+2,0,1,Choice 1A,0,20,-10,FALSE
+2,0,2,Choice 2A,-10,0,20,FALSE
+2,1,0,Prompt 2B,0,0,0,FALSE
+2,1,1,Choice 1B,0,20,-10,FALSE
+2,1,2,Choice 2B,-10,0,20,FALSE
+2,2,0,Prompt 2C,0,0,0,FALSE
+2,2,1,Choice 1C,0,20,-10,FALSE
+2,2,2,Choice 2C,-10,0,20,FALSE
+2,3,0,Prompt 2D,0,0,0,FALSE
+2,3,1,Choice 1D,0,20,-10,FALSE
+2,3,2,Choice 2D,-10,0,20,FALSE
+2,4,0,Prompt 2E,0,0,0,FALSE
+2,4,1,Choice 1E,0,20,-10,FALSE
+2,4,2,Choice 2E,-10,0,20,FALSE
+3,0,0,Prompt 3A,0,0,0,FALSE
+3,0,1,Choice 1A,-10,0,20,FALSE
+3,0,2,Choice 2A,0,20,-10,FALSE
+3,1,0,Prompt3B,0,0,0,FALSE
+3,1,1,Choice 1B,-10,0,20,FALSE
+3,1,2,Choice 2B,0,20,-10,FALSE
+3,2,0,Prompt3C,0,0,0,FALSE
+3,2,1,Choice 1C,-10,0,20,FALSE
+3,2,2,Choice 2C,0,20,-10,FALSE
+3,3,0,Prompt3D,0,0,0,FALSE
+3,3,1,Choice 1D,-10,0,20,FALSE
+3,3,2,Choice 2D,0,20,-10,FALSE
+3,4,0,Prompt3E,0,0,0,FALSE
+3,4,1,Choice 1E,-10,0,20,FALSE
+3,4,2,Choice 2E,0,20,-10,FALSE
+4,0,0,Prompt 4A,0,0,0,FALSE
+4,0,1,Choice 1A,-10,0,20,FALSE
+4,0,2,Choice 2A,0,20,-10,FALSE
+4,1,0,Prompt 4B,0,0,0,FALSE
+4,1,1,Choice 1B,-10,0,20,FALSE
+4,1,2,Choice 2B,0,20,-10,FALSE
+4,2,0,Prompt 4C,0,0,0,FALSE
+4,2,1,Choice 1C,-10,0,20,FALSE
+4,2,2,Choice 2C,0,20,-10,FALSE
+4,3,0,Prompt 4D,0,0,0,FALSE
+4,3,1,Choice 1D,-10,0,20,FALSE
+4,3,2,Choice 2D,0,20,-10,FALSE
+4,4,0,Prompt 4E,0,0,0,FALSE
+4,4,1,Choice 1E,-10,0,20,FALSE
+4,4,2,Choice 2E,0,20,-10,FALSE
+5,0,0,P1 Choice A,0,0,0,TRUE
+5,1,0,P1 Choice b,0,0,0,TRUE
+5,2,0,P1 Choice C,0,0,0,TRUE
+5,3,0,P1 Choice D,0,0,0,TRUE
+5,4,0,P1 Choice E,0,0,0,TRUE
+6,0,0,P3 Choice A,0,0,0,TRUE
+6,1,0,P3 Choice b,0,0,0,TRUE
+6,2,0,P3 Choice C,0,0,0,TRUE
+6,3,0,P3 Choice D,0,0,0,TRUE
+6,4,0,P3 Choice E,0,0,0,TRUE
+7,0,0,P4 Choice A,0,0,0,TRUE
+7,1,0,P4 Choice b,0,0,0,TRUE
+7,2,0,P4 Choice C,0,0,0,TRUE
+7,3,0,P4 Choice D,0,0,0,TRUE
+7,4,0,P4 Choice E,0,0,0,TRUE
