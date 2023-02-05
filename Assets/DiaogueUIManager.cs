@@ -9,6 +9,7 @@ public class DiaogueUIManager : MonoBehaviour
     public GameObject diaPrefab;
     public GameObject promptWindow;
     public Slider[] bars = new Slider[3];
+    public Sprite[] iconSprites;
     [SerializeField]
     AudioClip soundEffect;
     [SerializeField]
@@ -64,7 +65,17 @@ public class DiaogueUIManager : MonoBehaviour
                 uiObj.GetComponent<Button>().onClick.AddListener(() => OnClickTest(uiObj.tag));
                 uiObj.transform.SetParent(transform, false);
                 uiObj.transform.GetChild(0).GetComponent<Text>().text = d.dialogues[i][0];
-            
+                uiObj.transform.GetChild(1).GetChild(0).GetComponent<Text>().text = "";
+                if (i > 0)
+                {
+                    uiObj.transform.GetChild(1).GetComponent<Image>().rectTransform.sizeDelta = new Vector2(50, 50);
+                    int rand = Random.Range(0, 2);
+                    if (i <= iconSprites.Length / 2 && iconSprites.Length > 0) uiObj.transform.GetChild(1).GetComponent<Image>().sprite = iconSprites[2 * (i - 1) + rand];
+                }
+                else
+                {
+                    uiObj.transform.GetChild(1).transform.gameObject.SetActive(false);
+                }
             }
         }
         else
