@@ -9,6 +9,10 @@ public class DiaogueUIManager : MonoBehaviour
     public GameObject diaPrefab;
     public GameObject promptWindow;
     public Slider[] bars = new Slider[3];
+    [SerializeField]
+    AudioClip soundEffect;
+    [SerializeField]
+    AudioSource music;
     Vector3 choiceA;
     Vector3 choiceB;
     bool personalityChoice = false;
@@ -18,6 +22,7 @@ public class DiaogueUIManager : MonoBehaviour
         bars[1].maxValue = PlayerManager.instance.SoilMeter;
         bars[2].maxValue = PlayerManager.instance.WaterMeter;
         DialogueManager.instance.onDialougeUpdateEvent += OnDialougeUpdate;
+        if (music != null) music.Play();
     }
     public void UpdateBar()
     {
@@ -89,6 +94,8 @@ public class DiaogueUIManager : MonoBehaviour
     //Be able to select dialogue options. Doesn't do much else yet
     public void OnClickTest(string t)
     {
+        if (PlayerManager.instance.growthState > 3) return;
+        if (soundEffect != null) music.PlayOneShot(soundEffect, 0.5f);
         if (personalityChoice)
         {
             switch (t)

@@ -92,12 +92,12 @@ public class DialogueManager : MonoBehaviour
         {
             wait = true;
         }
-        if (!wait && PlayerManager.instance.growthState < 3)
+        if (!wait && PlayerManager.instance.growthState <= 3)
         {
             //Pick new Events
             int i = Random.Range(0, dialogueDict.Count);
             activeChoices.Add(dialogueDict[i]);
-            if (turn % 10 != 0) { //% 10
+            if (turn % 3 != 0) { //% 10
                 while(activeChoices[0].isPersonalityChoice == true)
                 {
                     activeChoices.RemoveAt(0);

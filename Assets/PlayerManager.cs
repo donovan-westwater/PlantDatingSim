@@ -17,6 +17,7 @@ public class PlayerManager : MonoBehaviour
     public Sprite[] spritesMasc;
     public Sprite[] spritesFemme;
     public Image plantSprite;
+    public Image finalSprite;
     public int growthState = 0;
     public bool isFemme = false;
     Text deathText;
@@ -83,10 +84,12 @@ public class PlayerManager : MonoBehaviour
             {
                 if (personalityRankings[i] > max) { max = personalityRankings[i]; maxIndex = i; }
             }
+            plantSprite.transform.gameObject.SetActive(false);
             //Switch Sprite
             if (isFemme)
             {
-                plantSprite.sprite = spritesFemme[maxIndex];
+                
+                finalSprite.sprite = spritesFemme[maxIndex];
                 switch (maxIndex)
                 {
                     case 0:
@@ -111,7 +114,7 @@ public class PlayerManager : MonoBehaviour
                         break;
                 }
             }else{
-                plantSprite.sprite = spritesMasc[maxIndex];
+                finalSprite.sprite = spritesMasc[maxIndex];
                 switch (maxIndex)
                 {
                     case 0:
@@ -154,6 +157,7 @@ public class PlayerManager : MonoBehaviour
                 DialogueManager.instance.wait = false;
                 WinScreen.SetActive(false);
                 plantSprite.sprite = growthSprites[0];
+                plantSprite.transform.gameObject.SetActive(true);
             }
         }
         else if( growthState > 0)
