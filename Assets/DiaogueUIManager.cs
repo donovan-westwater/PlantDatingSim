@@ -39,21 +39,37 @@ public class DiaogueUIManager : MonoBehaviour
     {
         promptWindow.SetActive(true);
         promptWindow.transform.GetChild(0).GetComponent<Text>().text = d.dialogues[DialogueManager.instance.currentPersonality][0];
-        if (personalityChoice) promptWindow.transform.GetChild(0).GetComponent<Text>().text = "Your plant friend wants to expand their interests. What will you give them?";
         choiceA = d.choiceA;
         choiceB = d.choiceB;
         personalityChoice = d.isPersonalityChoice;
+        if (personalityChoice) promptWindow.transform.GetChild(0).GetComponent<Text>().text = "Your plant friend wants to expand their interests. What will you give them?";
+        
         int i = 1;
-        if (d.isPersonalityChoice) i = 0;
-        for (;i< d.dialogues[DialogueManager.instance.currentPersonality].Count; i++)
-        {
-            GameObject uiObj = Instantiate(diaPrefab);
-            uiObj.tag = "Choice" + i;
-            uiObj.gameObject.SetActive(true);
-            uiObj.GetComponent<Button>().onClick.AddListener(() => OnClickTest(uiObj.tag));
-            uiObj.transform.SetParent(transform, false);
-            uiObj.transform.GetChild(0).GetComponent<Text>().text = d.dialogues[DialogueManager.instance.currentPersonality][i];
+        if (d.isPersonalityChoice) {  
+            i = 0;
+            for (;i< d.dialogues.Count; i++)
+            {
+                GameObject uiObj = Instantiate(diaPrefab);
+                uiObj.tag = "Choice" + i;
+                uiObj.gameObject.SetActive(true);
+                uiObj.GetComponent<Button>().onClick.AddListener(() => OnClickTest(uiObj.tag));
+                uiObj.transform.SetParent(transform, false);
+                uiObj.transform.GetChild(0).GetComponent<Text>().text = d.dialogues[DialogueManager.instance.currentPersonality][0];
             
+            }
+        }
+        else
+        {
+            for (; i < d.dialogues[DialogueManager.instance.currentPersonality].Count; i++)
+            {
+                GameObject uiObj = Instantiate(diaPrefab);
+                uiObj.tag = "Choice" + i;
+                uiObj.gameObject.SetActive(true);
+                uiObj.GetComponent<Button>().onClick.AddListener(() => OnClickTest(uiObj.tag));
+                uiObj.transform.SetParent(transform, false);
+                uiObj.transform.GetChild(0).GetComponent<Text>().text = d.dialogues[DialogueManager.instance.currentPersonality][i];
+
+            }
         }
     }
     //Be able to select dialogue options. Doesn't do much else yet
