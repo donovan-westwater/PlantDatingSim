@@ -19,7 +19,7 @@ public class DiaogueUIManager : MonoBehaviour
         bars[2].maxValue = PlayerManager.instance.WaterMeter;
         DialogueManager.instance.onDialougeUpdateEvent += OnDialougeUpdate;
     }
-    void UpdateBar()
+    public void UpdateBar()
     {
         bars[0].value = Mathf.Clamp(PlayerManager.instance.SolarMeter, 0, 100);
         bars[1].value = Mathf.Clamp(PlayerManager.instance.SoilMeter, 0, 100);
@@ -32,6 +32,7 @@ public class DiaogueUIManager : MonoBehaviour
             t.GetComponent<Button>().onClick.RemoveAllListeners();
             Destroy(t.gameObject);
         }
+        UpdateBar();
         DisplayChoices();
     }
     void DisplayChoices()
@@ -57,7 +58,7 @@ public class DiaogueUIManager : MonoBehaviour
                 uiObj.gameObject.SetActive(true);
                 uiObj.GetComponent<Button>().onClick.AddListener(() => OnClickTest(uiObj.tag));
                 uiObj.transform.SetParent(transform, false);
-                uiObj.transform.GetChild(0).GetComponent<Text>().text = d.dialogues[DialogueManager.instance.currentPersonality][0];
+                uiObj.transform.GetChild(0).GetComponent<Text>().text = d.dialogues[i][0];
             
             }
         }
@@ -66,6 +67,16 @@ public class DiaogueUIManager : MonoBehaviour
             for (; i < d.dialogues[DialogueManager.instance.currentPersonality].Count; i++)
             {
                 GameObject uiObj = Instantiate(diaPrefab);
+                if (i == 1) {
+                    uiObj.transform.GetChild(1).GetChild(0).GetComponent<Text>().text = "Solar: " + choiceA.x
+                    + " Soil: " + choiceA.y + " Water: " + choiceA.z;
+                }
+                else
+                {
+                    uiObj.transform.GetChild(1).GetChild(0).GetComponent<Text>().text = "Solar: " + choiceB.x
+                    + " Soil: " + choiceB.y + " Water: " + choiceB.z;
+                }
+                
                 uiObj.tag = "Choice" + i;
                 uiObj.gameObject.SetActive(true);
                 uiObj.GetComponent<Button>().onClick.AddListener(() => OnClickTest(uiObj.tag));

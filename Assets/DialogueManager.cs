@@ -31,7 +31,7 @@ public class DialogueManager : MonoBehaviour
     public delegate void OnDialogueUpdateEvent();
     public event OnDialogueUpdateEvent onDialougeUpdateEvent;
     public bool wait = false;
-    int turn = 1;
+    public int turn = 1;
     private void Awake()
     {
         if(instance == null)
@@ -92,7 +92,7 @@ public class DialogueManager : MonoBehaviour
             //Pick new Events
             int i = Random.Range(0, dialogueDict.Count);
             activeChoices.Add(dialogueDict[i]);
-            if (turn % 50 != 0) { //% 5
+            if (turn % 3 != 0) { //% 10
                 while(activeChoices[0].isPersonalityChoice == true)
                 {
                     activeChoices.RemoveAt(0);
