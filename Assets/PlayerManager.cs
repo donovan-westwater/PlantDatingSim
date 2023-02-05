@@ -10,6 +10,7 @@ public class PlayerManager : MonoBehaviour
     public float WaterMeter = 100;
     public GameObject FailScreen;
     public GameObject WinScreen;
+    public GameObject tutorial;
     public static PlayerManager instance;
     public float[] personalityRankings = { 0, 0, 0, 0, 0 }; //{boring,cute,intelligent,cool,sporty}
     public Sprite[] growthSprites;
@@ -33,10 +34,27 @@ public class PlayerManager : MonoBehaviour
         FailScreen.SetActive(false);
         WinScreen.SetActive(false);
     }
-
+    public void setMale()
+    {
+        isFemme = false;
+        tutorial.SetActive(false);
+        DialogueManager.instance.start = false;
+        DialogueManager.instance.wait = false;
+    }
+    public void setFemale()
+    {
+        isFemme = true;
+        tutorial.SetActive(false);
+        DialogueManager.instance.start = false;
+        DialogueManager.instance.wait = false;
+    }
     // Update is called once per frame
     void Update()
     {
+        if (DialogueManager.instance.start)
+        {
+            tutorial.SetActive(true);
+        }
         if(SolarMeter <= 0 || WaterMeter <= 0 || SoilMeter <= 0)
         {
             FailScreen.SetActive(true);
@@ -46,13 +64,15 @@ public class PlayerManager : MonoBehaviour
                 SolarMeter = 100;
                 SoilMeter = 100;
                 WaterMeter = 100;
+                growthState = 0;
                 for(int i = 0;i < personalityRankings.Length; i++)
                 {
                     personalityRankings[i] = 0;
                 }
-                DialogueManager.instance.turn = 1;
+                DialogueManager.instance.turn = 0;
                 DialogueManager.instance.wait = false;
                 FailScreen.SetActive(false);
+                plantSprite.sprite = growthSprites[0];
             }               
         }
         if(growthState > 3)
@@ -130,9 +150,10 @@ public class PlayerManager : MonoBehaviour
                 {
                     personalityRankings[i] = 0;
                 }
-                DialogueManager.instance.turn = 1;
+                DialogueManager.instance.turn = 0;
                 DialogueManager.instance.wait = false;
-                FailScreen.SetActive(false);
+                WinScreen.SetActive(false);
+                plantSprite.sprite = growthSprites[0];
             }
         }
         else if( growthState > 0)

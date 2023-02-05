@@ -32,6 +32,7 @@ public class DialogueManager : MonoBehaviour
     public event OnDialogueUpdateEvent onDialougeUpdateEvent;
     public bool wait = false;
     public int turn = 0;
+    public bool start = true;
     private void Awake()
     {
         if(instance == null)
@@ -87,6 +88,10 @@ public class DialogueManager : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
+        if (start)
+        {
+            wait = true;
+        }
         if (!wait && PlayerManager.instance.growthState < 3)
         {
             //Pick new Events
